@@ -1,0 +1,24 @@
+.admin {
+  &__layout {
+    height: 100%;
+  }
+  &__body {
+    display: flex;
+    height: calc(100vh - 64px);
+  }
+  &__side-left {
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    flex: 0 0 300px;
+    max-width: 300px;
+    min-width: 300px;
+    width: 300px;
+    background-color: #001529;
+  }
+  &__side-right {
+    margin-left: 300px;
+    width: calc(100% - 310px);
+    padding: 10px;
+  }
+}

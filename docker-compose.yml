@@ -1,0 +1,26 @@
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./be
+      # target: development
+      target: production
+    # volumes:
+    #   - ./be/src:/app/src
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./fe
+      target: development
+      # target: production
+    volumes:
+      - ./fe/src:/app/src
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend

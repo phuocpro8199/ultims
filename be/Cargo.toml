@@ -1,0 +1,25 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.10.2"
+actix-cors = "0.7.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+mongodb = "3.2.3"
+bson = { version ="2.14.0", features = ["chrono-0_4"] }
+dotenv = "0.15.0"
+bcrypt = "0.17.0"
+jsonwebtoken = "9.3.1"
+chrono = { version = "0.4.24", features = ["serde"] }
+validator = { version = "0.20", features = ["derive"] }
+uuid = { version = "1.16.0", features = ["v4", "serde"] }
+futures = "0.3.28"
+env_logger = "0.11.8"
+tokio = { version = "1.0", features = ["full"] }
+utoipa = "5.3.1"
+utoipa-swagger-ui = { version = "9.0.1", features = ["actix-web"] }
+log = "0.4.27"
+cargo-watch = "8.5.3"
