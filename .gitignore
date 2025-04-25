@@ -2,3 +2,4 @@
 .env
 target
 fe.env
+node_modules

@@ -1,7 +1,7 @@
 const routerPath = {
   PROFILE: '/',
   LOGIN: '/login',
-  REGISTER: 'register',
+  REGISTER: '/register',
   LOGOUT: '/logout',
   PRODUCT: '/product',
 };

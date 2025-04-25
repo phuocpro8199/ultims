@@ -27,6 +27,8 @@ export const authMessage = {
   LOGOUT_SUCCESS: 'Logout success',
   AUTH_NOT_ALLOW: 'Auth not allow',
   REFRESH_TOKEN_EXPIRED: 'Login expired',
+  REGISTER_SUCCESS: 'Register success',
+  REGISTER_FAIL: 'Register failed',
 };
 
 export const EXCLUDE_MEMBER = {

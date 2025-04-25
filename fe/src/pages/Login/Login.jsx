@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Input, Row, Col, notification } from 'antd';
+import { Button, Form, Input, Row, Col, notification, Typography } from 'antd';
 import './Login.less';
 import LoginBackground from './components/LoginBackground';
 import { useLoginMutation } from './hook';
@@ -7,6 +7,8 @@ import { useAppContext } from '../../context/appContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { authMessage } from '../../constants/common';
 import routerPath from '../../constants/routerPath';
+
+const { Text } = Typography;
 
 const Login = () => {
   const [form] = Form.useForm();
@@ -33,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <section className='login'>
+    <section className='login w-full'>
       <div className='login__container'>
         <Row gutter={[8, 8]} style={{ height: '100%' }}>
           <Col span={10}>
@@ -52,7 +54,7 @@ const Login = () => {
               layout='vertical'
             >
               <Form.Item
-                label='Mail'
+                label={<Text strong>Mail</Text>}
                 name='email'
                 rules={[
                   {
@@ -69,7 +71,7 @@ const Login = () => {
               </Form.Item>
 
               <Form.Item
-                label='password'
+                label={<Text strong>Password</Text>}
                 name='password'
                 rules={[
                   {

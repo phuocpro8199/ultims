@@ -4,7 +4,7 @@ import { clearLS, getAccessTokenFromLS, setAccessTokenToLS } from './auth';
 import httpStatus from '@constants/httpStatusCode';
 import { notification } from 'antd';
 import { authMessage } from '@constants/common';
-import { URL_LOGIN } from '@apis/auth';
+import { URL_LOGIN, URL_REGISTER } from '@apis/auth';
 
 class Http {
   accessToken;
@@ -35,7 +35,7 @@ class Http {
       (response) => {
         const { url } = response.config;
 
-        if (url === URL_LOGIN) {
+        if (url === URL_LOGIN || url === URL_REGISTER) {
           this.accessToken = response.data.token;
 
           setAccessTokenToLS(this.accessToken);

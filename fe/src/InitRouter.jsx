@@ -8,13 +8,13 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { useAppContext } from '@context/appContext';
-
-import routerPath from './constants/routerPath';
-import AdminLayout from './layouts/AdminLayout';
+import routerPath from '@constants/routerPath';
+import AdminLayout from '@layouts/AdminLayout';
 
 const Login = lazy(() => import('./pages/Login/Login'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 const Product = lazy(() => import('./pages/Product/Product'));
+const Register = lazy(() => import('./pages/Register/Register'));
 
 const ProtectedRoute = () => {
   const { isAuthenticated } = useAppContext();
@@ -55,6 +55,14 @@ const InitRouter = () => {
           element={
             <Suspense>
               <Login />
+            </Suspense>
+          }
+        />
+        <Route
+          path={routerPath.REGISTER}
+          element={
+            <Suspense>
+              <Register />
             </Suspense>
           }
         />
